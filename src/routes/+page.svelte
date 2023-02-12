@@ -1,3 +1,5 @@
+<!--TODO App preview section with screenshots -->
+
 <main class="relative w-full h-screen bg-black">
     <video autoplay muted loop id="background" class="w-full h-full">
         <source src="background.mp4" type="video/mp4" />
