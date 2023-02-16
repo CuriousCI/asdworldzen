@@ -14,7 +14,9 @@
             </span>
         </h1>
     </a>
-    <div class="w-full flex flex-wrap justify-start items-center gap-4">
+    <div
+        class="w-full flex flex-wrap justify-center md:justify-start items-center gap-4"
+    >
         <slot />
     </div>
 </section>

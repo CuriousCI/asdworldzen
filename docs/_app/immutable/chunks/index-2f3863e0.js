@@ -185,6 +185,12 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i])
+      iterations[i].d(detaching);
+  }
+}
 function element(name) {
   return document.createElement(name);
 }
@@ -562,6 +568,7 @@ export {
   append_hydration as H,
   component_subscribe as I,
   src_url_equal as J,
+  destroy_each as K,
   SvelteComponent as S,
   space as a,
   insert_hydration as b,
