@@ -708,20 +708,40 @@ function create_default_slot_1(ctx) {
 function create_default_slot(ctx) {
   let img0;
   let img0_src_value;
-  let t;
+  let t0;
   let img1;
   let img1_src_value;
+  let t1;
+  let amp_ad;
+  let div;
   return {
     c() {
       img0 = element("img");
-      t = space();
+      t0 = space();
       img1 = element("img");
+      t1 = space();
+      amp_ad = element("amp-ad");
+      div = element("div");
       this.h();
     },
     l(nodes) {
       img0 = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
-      t = claim_space(nodes);
+      t0 = claim_space(nodes);
       img1 = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
+      t1 = claim_space(nodes);
+      amp_ad = claim_element(nodes, "AMP-AD", {
+        width: true,
+        height: true,
+        type: true,
+        "data-ad-client": true,
+        "data-ad-slot": true,
+        "data-auto-format": true,
+        "data-full-width": true
+      });
+      var amp_ad_nodes = children(amp_ad);
+      div = claim_element(amp_ad_nodes, "DIV", { overflow: true });
+      children(div).forEach(detach);
+      amp_ad_nodes.forEach(detach);
       this.h();
     },
     h() {
@@ -733,20 +753,35 @@ function create_default_slot(ctx) {
         attr(img1, "src", img1_src_value);
       attr(img1, "alt", "App 2");
       attr(img1, "class", "h-[70vh] svelte-8fii8a");
+      attr(div, "overflow", "");
+      set_custom_element_data(amp_ad, "width", "100vw");
+      set_custom_element_data(amp_ad, "height", "320");
+      set_custom_element_data(amp_ad, "type", "adsense");
+      set_custom_element_data(amp_ad, "data-ad-client", "ca-pub-9406040528414499");
+      set_custom_element_data(amp_ad, "data-ad-slot", "5257041353");
+      set_custom_element_data(amp_ad, "data-auto-format", "rspv");
+      set_custom_element_data(amp_ad, "data-full-width", "");
     },
     m(target, anchor) {
       insert_hydration(target, img0, anchor);
-      insert_hydration(target, t, anchor);
+      insert_hydration(target, t0, anchor);
       insert_hydration(target, img1, anchor);
+      insert_hydration(target, t1, anchor);
+      insert_hydration(target, amp_ad, anchor);
+      append_hydration(amp_ad, div);
     },
     p: noop,
     d(detaching) {
       if (detaching)
         detach(img0);
       if (detaching)
-        detach(t);
+        detach(t0);
       if (detaching)
         detach(img1);
+      if (detaching)
+        detach(t1);
+      if (detaching)
+        detach(amp_ad);
     }
   };
 }

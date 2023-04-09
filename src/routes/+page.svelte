@@ -160,6 +160,17 @@
 >
     <img src="app-1.webp" alt="App 1" class="h-[70vh]" />
     <img src="app-2.webp" alt="App 2" class="h-[70vh]" />
+    <amp-ad
+        width="100vw"
+        height="320"
+        type="adsense"
+        data-ad-client="ca-pub-9406040528414499"
+        data-ad-slot="5257041353"
+        data-auto-format="rspv"
+        data-full-width=""
+    >
+        <div overflow="" />
+    </amp-ad>
 </Section>
 
 <style>
