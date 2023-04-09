@@ -5,17 +5,17 @@
         {
             alt: "YouTube",
             href: "https://youtube.com/@ASDWorldZen",
-            src: "youtube-2.png",
+            src: "youtube.webp",
         },
         {
             alt: "Instagram",
             href: "https://www.instagram.com/asdworldzen/",
-            src: "instagram-1.png",
+            src: "instagram.webp",
         },
         {
             alt: "Facebook",
             href: "https://www.facebook.com/taekwondoworldzen",
-            src: "facebook-1.png",
+            src: "facebook.webp",
         },
         {
             alt: "App",
@@ -67,12 +67,21 @@
     background="bg-gradient-to-tr from-black to-red-900"
 >
     <img
-        src="worldzen.png"
+        src="muay-thai-lethwei.webp"
         alt="World Zen"
-        class="max-h-screen md:max-h-[50vh]"
+        class="max-h-screen md:max-h-[70vh]"
     />
-    <img src="m13k.png" alt="M13K" class="max-h-screen md:max-h-[50vh]" />
-    <img src="insta.png" alt="Instagram" class="max-h-screen md:max-h-[50vh]" />
+    <img
+        src="worldzen.webp"
+        alt="World Zen"
+        class="max-h-screen md:max-h-[70vh]"
+    />
+    <img src="m13k.webp" alt="M13K" class="max-h-screen md:max-h-[70vh]" />
+    <img
+        src="insta.webp"
+        alt="Instagram"
+        class="max-h-screen md:max-h-[70vh]"
+    />
 </Section>
 
 <Section
@@ -108,6 +117,18 @@
     </div>
 </Section>
 
+<amp-ad
+    width="100vw"
+    height="320"
+    type="adsense"
+    data-ad-client="ca-pub-9406040528414499"
+    data-ad-slot="8074776384"
+    data-auto-format="rspv"
+    data-full-width=""
+>
+    <div overflow="" />
+</amp-ad>
+
 <Section
     title="Dove trovarci?"
     icon="pin_drop"
@@ -132,13 +153,13 @@
 </Section>
 
 <Section
-    title="Taekwon-Do App"
+    title="Martial Arts App"
     icon="download"
     href="https://app.worldzen.it"
     background="bg-gradient-to-br from-black to-red-900"
 >
-    <img src="app-1.png" alt="App 1" class="h-[70vh]" />
-    <img src="app-2.png" alt="App 2" class="h-[70vh]" />
+    <img src="app-1.webp" alt="App 1" class="h-[70vh]" />
+    <img src="app-2.webp" alt="App 2" class="h-[70vh]" />
 </Section>
 
 <style>
