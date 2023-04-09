@@ -46,7 +46,7 @@ function create_fragment$1(ctx) {
     l(nodes) {
       section = claim_element(nodes, "SECTION", { class: true });
       var section_nodes = children(section);
-      a = claim_element(section_nodes, "A", { href: true, id: true });
+      a = claim_element(section_nodes, "A", { href: true });
       var a_nodes = children(a);
       h1 = claim_element(a_nodes, "H1", { class: true });
       var h1_nodes = children(h1);
@@ -84,7 +84,6 @@ function create_fragment$1(ctx) {
         /*href*/
         ctx[2]
       );
-      attr(a, "id", "title");
       attr(div, "class", "w-full flex flex-wrap justify-center md:justify-start items-center gap-4");
       attr(section, "class", section_class_value = "w-full min-h-min p-10 " + /*background*/
       ctx[3]);
@@ -177,7 +176,7 @@ function create_fragment$1(ctx) {
 }
 function instance$1($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
-  let { title = "", icon = "", href = "", background = "" } = $$props;
+  let { title = "", icon = "", href = "https://app.worldzen.it", background = "" } = $$props;
   $$self.$$set = ($$props2) => {
     if ("title" in $$props2)
       $$invalidate(0, title = $$props2.title);
@@ -763,6 +762,8 @@ function create_fragment(ctx) {
   let source0_src_value;
   let source1;
   let source1_src_value;
+  let track;
+  let track_src_value;
   let t0;
   let div3;
   let div2;
@@ -839,6 +840,7 @@ function create_fragment(ctx) {
       video = element("video");
       source0 = element("source");
       source1 = element("source");
+      track = element("track");
       t0 = space();
       div3 = element("div");
       div2 = element("div");
@@ -874,6 +876,12 @@ function create_fragment(ctx) {
       var video_nodes = children(video);
       source0 = claim_element(video_nodes, "SOURCE", { src: true, type: true });
       source1 = claim_element(video_nodes, "SOURCE", { src: true, type: true });
+      track = claim_element(video_nodes, "TRACK", {
+        src: true,
+        kind: true,
+        srclang: true,
+        label: true
+      });
       video_nodes.forEach(detach);
       t0 = claim_space(main_nodes);
       div3 = claim_element(main_nodes, "DIV", { class: true });
@@ -939,6 +947,11 @@ function create_fragment(ctx) {
       if (!src_url_equal(source1.src, source1_src_value = "/background.webm"))
         attr(source1, "src", source1_src_value);
       attr(source1, "type", "video/webm");
+      if (!src_url_equal(track.src, track_src_value = "captions_en.vtt"))
+        attr(track, "src", track_src_value);
+      attr(track, "kind", "captions");
+      attr(track, "srclang", "en");
+      attr(track, "label", "english_captions");
       video.autoplay = true;
       video.muted = true;
       video.loop = true;
@@ -976,6 +989,7 @@ function create_fragment(ctx) {
       append_hydration(main, video);
       append_hydration(video, source0);
       append_hydration(video, source1);
+      append_hydration(video, track);
       append_hydration(main, t0);
       append_hydration(main, div3);
       append_hydration(div3, div2);

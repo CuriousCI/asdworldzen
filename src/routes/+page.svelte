@@ -44,6 +44,12 @@
     >
         <source src="/background.mp4" type="video/mp4" />
         <source src="/background.webm" type="video/webm" />
+        <track
+            src="captions_en.vtt"
+            kind="captions"
+            srclang="en"
+            label="english_captions"
+        />
     </video>
 
     <div
@@ -174,13 +180,8 @@
 >
     <img src="app-1.webp" alt="App 1" class="h-[70vh]" />
     <img src="app-2.webp" alt="App 2" class="h-[70vh]" />
-
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9406040528414499" crossorigin="anonymous"></script> -->
-    <!-- app -->
-    <!-- <script> -->
-    <!--      (adsbygoogle = window.adsbygoogle || []).push({}); -->
-    <!-- </script> -->
 </Section>
+
 <ins
     class="adsbygoogle"
     style="display:block"
