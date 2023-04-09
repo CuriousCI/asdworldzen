@@ -91,18 +91,18 @@
     <img
         src="muay-thai-lethwei.webp"
         alt="World Zen"
-        class="max-h-screen md:max-h-[70vh]"
+        class="max-h-screen md:max-h-[40vh]"
     />
     <img
         src="worldzen.webp"
         alt="World Zen"
-        class="max-h-screen md:max-h-[70vh]"
+        class="max-h-screen md:max-h-[40vh]"
     />
-    <img src="m13k.webp" alt="M13K" class="max-h-screen md:max-h-[70vh]" />
+    <img src="m13k.webp" alt="M13K" class="max-h-screen md:max-h-[40vh]" />
     <img
         src="insta.webp"
         alt="Instagram"
-        class="max-h-screen md:max-h-[70vh]"
+        class="max-h-screen md:max-h-[40vh]"
     />
 </Section>
 

@@ -311,19 +311,19 @@ function create_default_slot_3(ctx) {
       if (!src_url_equal(img0.src, img0_src_value = "muay-thai-lethwei.webp"))
         attr(img0, "src", img0_src_value);
       attr(img0, "alt", "World Zen");
-      attr(img0, "class", "max-h-screen md:max-h-[70vh] svelte-8fii8a");
+      attr(img0, "class", "max-h-screen md:max-h-[40vh] svelte-8fii8a");
       if (!src_url_equal(img1.src, img1_src_value = "worldzen.webp"))
         attr(img1, "src", img1_src_value);
       attr(img1, "alt", "World Zen");
-      attr(img1, "class", "max-h-screen md:max-h-[70vh] svelte-8fii8a");
+      attr(img1, "class", "max-h-screen md:max-h-[40vh] svelte-8fii8a");
       if (!src_url_equal(img2.src, img2_src_value = "m13k.webp"))
         attr(img2, "src", img2_src_value);
       attr(img2, "alt", "M13K");
-      attr(img2, "class", "max-h-screen md:max-h-[70vh] svelte-8fii8a");
+      attr(img2, "class", "max-h-screen md:max-h-[40vh] svelte-8fii8a");
       if (!src_url_equal(img3.src, img3_src_value = "insta.webp"))
         attr(img3, "src", img3_src_value);
       attr(img3, "alt", "Instagram");
-      attr(img3, "class", "max-h-screen md:max-h-[70vh] svelte-8fii8a");
+      attr(img3, "class", "max-h-screen md:max-h-[40vh] svelte-8fii8a");
     },
     m(target, anchor) {
       insert_hydration(target, img0, anchor);
