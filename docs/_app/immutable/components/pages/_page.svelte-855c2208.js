@@ -965,6 +965,7 @@ function create_fragment(ctx) {
       video.loop = true;
       attr(video, "id", "background");
       attr(video, "class", "w-full h-full svelte-8fii8a");
+      video.playsInline = true;
       if (!src_url_equal(img.src, img_src_value = "worldzen.svg"))
         attr(img, "src", img_src_value);
       attr(img, "alt", "World Zen");

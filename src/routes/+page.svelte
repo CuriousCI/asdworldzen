@@ -26,7 +26,7 @@
 </script>
 
 <main class="relative w-full h-screen bg-black">
-    <video autoplay muted loop id="background" class="w-full h-full">
+    <video autoplay muted loop id="background" class="w-full h-full" playsinline>
         <source src="/background.mp4" type="video/mp4" />
         <source src="/background.webm" type="video/webm" />
     </video>
