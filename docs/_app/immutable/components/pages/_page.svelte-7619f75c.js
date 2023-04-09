@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, c as claim_space, h as detach, n as attr, b as insert_hydration, H as append_hydration, u as set_data, E as update_slot_base, F as get_all_dirty_from_scope, G as get_slot_changes, f as transition_in, t as transition_out, x as create_component, y as claim_component, J as src_url_equal, K as set_custom_element_data, z as mount_component, L as destroy_each, A as destroy_component, C as noop, p as set_style } from "../../chunks/index-4e8a7cd9.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, c as claim_space, h as detach, n as attr, b as insert_hydration, H as append_hydration, u as set_data, E as update_slot_base, F as get_all_dirty_from_scope, G as get_slot_changes, f as transition_in, t as transition_out, x as create_component, y as claim_component, J as src_url_equal, p as set_style, z as mount_component, K as destroy_each, A as destroy_component, o as onMount, C as noop } from "../../chunks/index-2f3863e0.js";
 function create_fragment$1(ctx) {
   let section;
   let a;
@@ -231,7 +231,12 @@ function create_each_block(ctx) {
         class: true
       });
       var a_nodes = children(a);
-      img = claim_element(a_nodes, "IMG", { src: true, alt: true, class: true });
+      img = claim_element(a_nodes, "IMG", {
+        src: true,
+        alt: true,
+        class: true,
+        height: true
+      });
       t = claim_space(a_nodes);
       a_nodes.forEach(detach);
       this.h();
@@ -246,7 +251,8 @@ function create_each_block(ctx) {
         /*alt*/
         ctx[1]
       );
-      attr(img, "class", "h-8 sm:h-14 md:h-20 drop-shadow-2xl svelte-8fii8a");
+      attr(img, "class", "sm:h-14 md:h-20 drop-shadow-2xl svelte-8fii8a");
+      attr(img, "height", "32");
       attr(
         a,
         "href",
@@ -708,40 +714,20 @@ function create_default_slot_1(ctx) {
 function create_default_slot(ctx) {
   let img0;
   let img0_src_value;
-  let t0;
+  let t;
   let img1;
   let img1_src_value;
-  let t1;
-  let amp_ad;
-  let div;
   return {
     c() {
       img0 = element("img");
-      t0 = space();
+      t = space();
       img1 = element("img");
-      t1 = space();
-      amp_ad = element("amp-ad");
-      div = element("div");
       this.h();
     },
     l(nodes) {
       img0 = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
-      t0 = claim_space(nodes);
+      t = claim_space(nodes);
       img1 = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
-      t1 = claim_space(nodes);
-      amp_ad = claim_element(nodes, "AMP-AD", {
-        width: true,
-        height: true,
-        type: true,
-        "data-ad-client": true,
-        "data-ad-slot": true,
-        "data-auto-format": true,
-        "data-full-width": true
-      });
-      var amp_ad_nodes = children(amp_ad);
-      div = claim_element(amp_ad_nodes, "DIV", { overflow: true });
-      children(div).forEach(detach);
-      amp_ad_nodes.forEach(detach);
       this.h();
     },
     h() {
@@ -753,35 +739,20 @@ function create_default_slot(ctx) {
         attr(img1, "src", img1_src_value);
       attr(img1, "alt", "App 2");
       attr(img1, "class", "h-[70vh] svelte-8fii8a");
-      attr(div, "overflow", "");
-      set_custom_element_data(amp_ad, "width", "100vw");
-      set_custom_element_data(amp_ad, "height", "320");
-      set_custom_element_data(amp_ad, "type", "adsense");
-      set_custom_element_data(amp_ad, "data-ad-client", "ca-pub-9406040528414499");
-      set_custom_element_data(amp_ad, "data-ad-slot", "5257041353");
-      set_custom_element_data(amp_ad, "data-auto-format", "rspv");
-      set_custom_element_data(amp_ad, "data-full-width", "");
     },
     m(target, anchor) {
       insert_hydration(target, img0, anchor);
-      insert_hydration(target, t0, anchor);
+      insert_hydration(target, t, anchor);
       insert_hydration(target, img1, anchor);
-      insert_hydration(target, t1, anchor);
-      insert_hydration(target, amp_ad, anchor);
-      append_hydration(amp_ad, div);
     },
     p: noop,
     d(detaching) {
       if (detaching)
         detach(img0);
       if (detaching)
-        detach(t0);
+        detach(t);
       if (detaching)
         detach(img1);
-      if (detaching)
-        detach(t1);
-      if (detaching)
-        detach(amp_ad);
     }
   };
 }
@@ -809,12 +780,13 @@ function create_fragment(ctx) {
   let t5;
   let section1;
   let t6;
-  let amp_ad;
-  let div4;
+  let ins0;
   let t7;
   let section2;
   let t8;
   let section3;
+  let t9;
+  let ins1;
   let current;
   let each_value = (
     /*social*/
@@ -886,12 +858,13 @@ function create_fragment(ctx) {
       t5 = space();
       create_component(section1.$$.fragment);
       t6 = space();
-      amp_ad = element("amp-ad");
-      div4 = element("div");
+      ins0 = element("ins");
       t7 = space();
       create_component(section2.$$.fragment);
       t8 = space();
       create_component(section3.$$.fragment);
+      t9 = space();
+      ins1 = element("ins");
       this.h();
     },
     l(nodes) {
@@ -934,23 +907,29 @@ function create_fragment(ctx) {
       t5 = claim_space(nodes);
       claim_component(section1.$$.fragment, nodes);
       t6 = claim_space(nodes);
-      amp_ad = claim_element(nodes, "AMP-AD", {
-        width: true,
-        height: true,
-        type: true,
+      ins0 = claim_element(nodes, "INS", {
+        class: true,
+        style: true,
         "data-ad-client": true,
         "data-ad-slot": true,
-        "data-auto-format": true,
-        "data-full-width": true
+        "data-ad-format": true,
+        "data-full-width-responsive": true
       });
-      var amp_ad_nodes = children(amp_ad);
-      div4 = claim_element(amp_ad_nodes, "DIV", { overflow: true });
-      children(div4).forEach(detach);
-      amp_ad_nodes.forEach(detach);
+      children(ins0).forEach(detach);
       t7 = claim_space(nodes);
       claim_component(section2.$$.fragment, nodes);
       t8 = claim_space(nodes);
       claim_component(section3.$$.fragment, nodes);
+      t9 = claim_space(nodes);
+      ins1 = claim_element(nodes, "INS", {
+        class: true,
+        style: true,
+        "data-ad-client": true,
+        "data-ad-slot": true,
+        "data-ad-format": true,
+        "data-full-width-responsive": true
+      });
+      children(ins1).forEach(detach);
       this.h();
     },
     h() {
@@ -979,14 +958,18 @@ function create_fragment(ctx) {
       attr(div2, "class", "p-10");
       attr(div3, "class", "absolute top-0 w-full h-full grid place-items-center bg-gradient-to-b from-black/60 to-black/80");
       attr(main, "class", "relative w-full h-screen bg-black");
-      attr(div4, "overflow", "");
-      set_custom_element_data(amp_ad, "width", "100vw");
-      set_custom_element_data(amp_ad, "height", "320");
-      set_custom_element_data(amp_ad, "type", "adsense");
-      set_custom_element_data(amp_ad, "data-ad-client", "ca-pub-9406040528414499");
-      set_custom_element_data(amp_ad, "data-ad-slot", "8074776384");
-      set_custom_element_data(amp_ad, "data-auto-format", "rspv");
-      set_custom_element_data(amp_ad, "data-full-width", "");
+      attr(ins0, "class", "adsbygoogle");
+      set_style(ins0, "display", "block");
+      attr(ins0, "data-ad-client", "ca-pub-9406040528414499");
+      attr(ins0, "data-ad-slot", "8074776384");
+      attr(ins0, "data-ad-format", "auto");
+      attr(ins0, "data-full-width-responsive", "true");
+      attr(ins1, "class", "adsbygoogle");
+      set_style(ins1, "display", "block");
+      attr(ins1, "data-ad-client", "ca-pub-9406040528414499");
+      attr(ins1, "data-ad-slot", "5257041353");
+      attr(ins1, "data-ad-format", "auto");
+      attr(ins1, "data-full-width-responsive", "true");
     },
     m(target, anchor) {
       insert_hydration(target, main, anchor);
@@ -1012,12 +995,13 @@ function create_fragment(ctx) {
       insert_hydration(target, t5, anchor);
       mount_component(section1, target, anchor);
       insert_hydration(target, t6, anchor);
-      insert_hydration(target, amp_ad, anchor);
-      append_hydration(amp_ad, div4);
+      insert_hydration(target, ins0, anchor);
       insert_hydration(target, t7, anchor);
       mount_component(section2, target, anchor);
       insert_hydration(target, t8, anchor);
       mount_component(section3, target, anchor);
+      insert_hydration(target, t9, anchor);
+      insert_hydration(target, ins1, anchor);
       current = true;
     },
     p(ctx2, [dirty]) {
@@ -1095,13 +1079,17 @@ function create_fragment(ctx) {
       if (detaching)
         detach(t6);
       if (detaching)
-        detach(amp_ad);
+        detach(ins0);
       if (detaching)
         detach(t7);
       destroy_component(section2, detaching);
       if (detaching)
         detach(t8);
       destroy_component(section3, detaching);
+      if (detaching)
+        detach(t9);
+      if (detaching)
+        detach(ins1);
     }
   };
 }
@@ -1128,6 +1116,10 @@ function instance($$self) {
       src: "favicon.png"
     }
   ];
+  onMount(() => {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  });
   return [social];
 }
 class Page extends SvelteComponent {

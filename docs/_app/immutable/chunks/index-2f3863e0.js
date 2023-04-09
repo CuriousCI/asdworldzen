@@ -209,13 +209,6 @@ function attr(node, attribute, value) {
   else if (node.getAttribute(attribute) !== value)
     node.setAttribute(attribute, value);
 }
-function set_custom_element_data(node, prop, value) {
-  if (prop in node) {
-    node[prop] = typeof node[prop] === "boolean" && value === "" ? true : value;
-  } else {
-    attr(node, prop, value);
-  }
-}
 function children(element2) {
   return Array.from(element2.childNodes);
 }
@@ -575,8 +568,7 @@ export {
   append_hydration as H,
   component_subscribe as I,
   src_url_equal as J,
-  set_custom_element_data as K,
-  destroy_each as L,
+  destroy_each as K,
   SvelteComponent as S,
   space as a,
   insert_hydration as b,

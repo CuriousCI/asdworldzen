@@ -436,9 +436,6 @@ video {
 .contents{
   display: contents;
 }
-.h-8{
-  height: 2rem;
-}
 .h-\[50vh\]{
   height: 50vh;
 }

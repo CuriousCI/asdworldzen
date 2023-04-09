@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import Section from "../lib/Section.svelte";
 
     const social = [
@@ -23,10 +24,24 @@
             src: "favicon.png",
         },
     ];
+
+    onMount(() => {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+    });
 </script>
 
 <main class="relative w-full h-screen bg-black">
-    <video autoplay muted loop id="background" class="w-full h-full" playsinline>
+    <video
+        autoplay
+        muted
+        loop
+        id="background"
+        class="w-full h-full"
+        playsinline
+    >
         <source src="/background.mp4" type="video/mp4" />
         <source src="/background.webm" type="video/webm" />
     </video>
@@ -45,7 +60,8 @@
                             <img
                                 {src}
                                 {alt}
-                                class="h-8 sm:h-14 md:h-20 drop-shadow-2xl"
+                                class="sm:h-14 md:h-20 drop-shadow-2xl"
+                                height="32"
                             />
                         </a>
                     {/each}
@@ -117,17 +133,15 @@
     </div>
 </Section>
 
-<amp-ad
-    width="100vw"
-    height="320"
-    type="adsense"
+<!-- location -->
+<ins
+    class="adsbygoogle"
+    style="display:block"
     data-ad-client="ca-pub-9406040528414499"
     data-ad-slot="8074776384"
-    data-auto-format="rspv"
-    data-full-width=""
->
-    <div overflow="" />
-</amp-ad>
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+/>
 
 <Section
     title="Dove trovarci?"
@@ -160,18 +174,21 @@
 >
     <img src="app-1.webp" alt="App 1" class="h-[70vh]" />
     <img src="app-2.webp" alt="App 2" class="h-[70vh]" />
-    <amp-ad
-        width="100vw"
-        height="320"
-        type="adsense"
-        data-ad-client="ca-pub-9406040528414499"
-        data-ad-slot="5257041353"
-        data-auto-format="rspv"
-        data-full-width=""
-    >
-        <div overflow="" />
-    </amp-ad>
+
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9406040528414499" crossorigin="anonymous"></script> -->
+    <!-- app -->
+    <!-- <script> -->
+    <!--      (adsbygoogle = window.adsbygoogle || []).push({}); -->
+    <!-- </script> -->
 </Section>
+<ins
+    class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9406040528414499"
+    data-ad-slot="5257041353"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+/>
 
 <style>
     #background {
