@@ -85,6 +85,10 @@ function get_all_dirty_from_scope($$scope) {
   }
   return -1;
 }
+function set_store_value(store, ret, value) {
+  store.set(value);
+  return ret;
+}
 let is_hydrating = false;
 function start_hydrating() {
   is_hydrating = true;
@@ -202,6 +206,10 @@ function space() {
 }
 function empty() {
   return text("");
+}
+function listen(node, event, handler, options) {
+  node.addEventListener(event, handler, options);
+  return () => node.removeEventListener(event, handler, options);
 }
 function attr(node, attribute, value) {
   if (value == null)
@@ -557,18 +565,63 @@ class SvelteComponent {
     }
   }
 }
+const subscriber_queue = [];
+function writable(value, start = noop) {
+  let stop;
+  const subscribers = /* @__PURE__ */ new Set();
+  function set(new_value) {
+    if (safe_not_equal(value, new_value)) {
+      value = new_value;
+      if (stop) {
+        const run_queue = !subscriber_queue.length;
+        for (const subscriber of subscribers) {
+          subscriber[1]();
+          subscriber_queue.push(subscriber, value);
+        }
+        if (run_queue) {
+          for (let i = 0; i < subscriber_queue.length; i += 2) {
+            subscriber_queue[i][0](subscriber_queue[i + 1]);
+          }
+          subscriber_queue.length = 0;
+        }
+      }
+    }
+  }
+  function update2(fn) {
+    set(fn(value));
+  }
+  function subscribe2(run2, invalidate = noop) {
+    const subscriber = [run2, invalidate];
+    subscribers.add(subscriber);
+    if (subscribers.size === 1) {
+      stop = start(set) || noop;
+    }
+    run2(value);
+    return () => {
+      subscribers.delete(subscriber);
+      if (subscribers.size === 0) {
+        stop();
+        stop = null;
+      }
+    };
+  }
+  return { set, update: update2, subscribe: subscribe2 };
+}
 export {
   destroy_component as A,
   tick as B,
-  noop as C,
-  create_slot as D,
-  update_slot_base as E,
-  get_all_dirty_from_scope as F,
-  get_slot_changes as G,
-  append_hydration as H,
-  component_subscribe as I,
-  src_url_equal as J,
-  destroy_each as K,
+  writable as C,
+  noop as D,
+  component_subscribe as E,
+  src_url_equal as F,
+  append_hydration as G,
+  listen as H,
+  set_store_value as I,
+  create_slot as J,
+  update_slot_base as K,
+  get_all_dirty_from_scope as L,
+  get_slot_changes as M,
+  destroy_each as N,
   SvelteComponent as S,
   space as a,
   insert_hydration as b,

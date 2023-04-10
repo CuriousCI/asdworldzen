@@ -7,9 +7,11 @@
 
 <section class="w-full min-h-min p-10 {background}">
     <a {href}>
-        <h1 class="text-5xl mb-10 font-bold">
+        <h1 class="text-2xl sm:text-4xl md:text-5xl mb-10 font-bold">
             {title}
-            <span class="material-symbols-outlined text-5xl relative top-2">
+            <span
+                class="material-symbols-outlined text-2xl sm:text-4xl md:text-5xl relative top-2"
+            >
                 {icon}
             </span>
         </h1>

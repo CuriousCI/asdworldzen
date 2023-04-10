@@ -1,6 +1,14 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import Section from "../lib/Section.svelte";
+    import { view } from "$lib/stores";
+
+    const gallery = [
+        "muay-thai-lethwei.webp",
+        "worldzen.webp",
+        "insta.webp",
+        "m13k.webp",
+    ];
 
     const social = [
         {
@@ -66,8 +74,8 @@
                             <img
                                 {src}
                                 {alt}
-                                class="sm:h-14 md:h-20 drop-shadow-2xl"
-                                height="32"
+                                class="h-8 sm:h-14 md:h-20 drop-shadow-2xl"
+                                height="1"
                             />
                         </a>
                     {/each}
@@ -84,26 +92,39 @@
 </main>
 
 <Section
-    title="Corsi"
+    title="Galleria"
     icon="sports_martial_arts"
     background="bg-gradient-to-tr from-black to-red-900"
 >
-    <img
-        src="muay-thai-lethwei.webp"
-        alt="World Zen"
-        class="max-h-screen md:max-h-[40vh]"
-    />
-    <img
-        src="worldzen.webp"
-        alt="World Zen"
-        class="max-h-screen md:max-h-[40vh]"
-    />
-    <img src="m13k.webp" alt="M13K" class="max-h-screen md:max-h-[40vh]" />
-    <img
-        src="insta.webp"
-        alt="Instagram"
-        class="max-h-screen md:max-h-[40vh]"
-    />
+    {#each gallery as image}
+        <button
+            on:click={() => {
+                view(image);
+            }}
+        >
+            <img
+                src={image}
+                alt="World Zen"
+                class="max-h-screen md:max-h-[30vh]"
+            />
+        </button>
+    {/each}
+    <!-- <img -->
+    <!--     src="muay-thai-lethwei.webp" -->
+    <!--     alt="World Zen" -->
+    <!--     class="max-h-screen md:max-h-[40vh]" -->
+    <!-- /> -->
+    <!-- <img -->
+    <!--     src="worldzen.webp" -->
+    <!--     alt="World Zen" -->
+    <!--     class="max-h-screen md:max-h-[40vh]" -->
+    <!-- /> -->
+    <!-- <img src="m13k.webp" alt="M13K" class="max-h-screen md:max-h-[40vh]" /> -->
+    <!-- <img -->
+    <!--     src="insta.webp" -->
+    <!--     alt="Instagram" -->
+    <!--     class="max-h-screen md:max-h-[40vh]" -->
+    <!-- /> -->
 </Section>
 
 <Section
@@ -111,43 +132,49 @@
     icon="call"
     background="bg-gradient-to-br from-black to-red-900"
 >
-    <div class="flex flex-col">
-        <h1 class="text-4xl font-bold mb-3">Taekwon-Do</h1>
-        <span class="flex gap-2 text-3xl">
-            <h2 class="text-3xl font-bold">Sabum <i> Marcelo Valente </i>:</h2>
-            <a href="tel:3932214993"> 3932214993</a>
-        </span>
-        <span class="text-2xl">
-            Presso ISIS Enrico Mattei, via Paolo Borsellino 3, Cerveteri
-        </span>
-        <span class="text-2xl mb-2">Lunedì e mercoledì 19:30-22:00</span>
-        <span class="flex gap-2 text-3xl">
-            <h2 class="text-3xl font-bold">Bosabum <i> Bryan Carfagna </i>:</h2>
-            <a href="tel:3487474257">3487474257</a>
-        </span>
-        <span class="text-2xl">
-            Presso ASD Bad Boys, via Aldo Moro 39, Ladispoli
-        </span>
-        <span class="text-2xl mb-6">Martedì e giovedì 17:30-19:00</span>
-        <h1 class="text-4xl font-bold mb-2">Muay-Thai</h1>
-        <h2 class="text-3xl mb-2">M.13.K. Ṣ̄ilpa k̄hæn s̄ib s̄ām</h2>
-        <h2 class="text-3xl font-bold">Kru<i> Bryan Carfagna </i>:</h2>
-        <span class="text-2xl">
-            Presso ISIS Enrico Mattei, via Paolo Borsellino 3, Cerveteri
-        </span>
-        <span class="text-2xl">Lunedì e mercoledì 18:30-19:30</span>
+    <div class="flex flex-col gap-4">
+        <div>
+            <h1>Taekwon-Do</h1>
+            <div class="flex gap-2">
+                <p class="font-bold">Sabum <i> Marcelo Valente </i>:</p>
+                <a href="tel:3932214993"><p>3932214993</p></a>
+            </div>
+            <p>
+                Presso <b>ISIS Enrico Mattei</b>, via Paolo Borsellino 3,
+                Cerveteri
+            </p>
+            <p class="font-bold italic">Lunedì e mercoledì 19:30-22:00</p>
+        </div>
+        <div>
+            <span class="flex gap-2">
+                <p class="font-bold">Bosabum <i> C. Bryan </i>:</p>
+                <a href="tel:3487474257"><p>3487474257</p></a>
+            </span>
+            <p>Presso <b>ASD Bad Boys</b>, via Aldo Moro 39, Ladispoli</p>
+            <p class="font-bold italic">Martedì e giovedì 17:30-19:00</p>
+        </div>
+        <div>
+            <h1>Muay-Thai</h1>
+            <h2>M.13.K. Ṣ̄ilpa k̄hæn s̄ib s̄ām</h2>
+            <span class="flex gap-2">
+                <p class="font-bold">Kru <i> C. Bryan </i>:</p>
+                <a href="tel:3487474257"><p>3487474257</p></a>
+            </span>
+            <p>Presso ISIS Enrico Mattei, via Paolo Borsellino 3, Cerveteri</p>
+            <p class="font-bold italic">Lunedì e mercoledì 18:30-19:30</p>
+        </div>
     </div>
 </Section>
 
 <!-- location -->
-<ins
-    class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-9406040528414499"
-    data-ad-slot="8074776384"
-    data-ad-format="auto"
-    data-full-width-responsive="true"
-/>
+<!-- <ins -->
+<!--     class="adsbygoogle" -->
+<!--     style="display:block" -->
+<!--     data-ad-client="ca-pub-9406040528414499" -->
+<!--     data-ad-slot="8074776384" -->
+<!--     data-ad-format="auto" -->
+<!--     data-full-width-responsive="true" -->
+<!-- /> -->
 
 <Section
     title="Dove trovarci?"
@@ -182,15 +209,15 @@
     <img src="app-2.webp" alt="App 2" class="h-[70vh]" />
 </Section>
 
-<ins
-    class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-9406040528414499"
-    data-ad-slot="5257041353"
-    data-ad-format="auto"
-    data-full-width-responsive="true"
-/>
+<!-- <ins -->
+<!--     class="adsbygoogle" -->
+<!--     style="display:block" -->
+<!--     data-ad-client="ca-pub-9406040528414499" -->
+<!--     data-ad-slot="5257041353" -->
+<!--     data-ad-format="auto" -->
+<!--     data-full-width-responsive="true" -->
 
+<!-- /> -->
 <style>
     #background {
         object-fit: cover;
