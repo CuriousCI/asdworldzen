@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, J as create_slot, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, c as claim_space, h as detach, n as attr, b as insert_hydration, G as append_hydration, u as set_data, K as update_slot_base, L as get_all_dirty_from_scope, M as get_slot_changes, f as transition_in, t as transition_out, x as create_component, y as claim_component, F as src_url_equal, z as mount_component, N as destroy_each, A as destroy_component, o as onMount, D as noop, e as empty, p as set_style, H as listen } from "../../chunks/index-f8a70087.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, J as create_slot, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, c as claim_space, h as detach, n as attr, b as insert_hydration, G as append_hydration, u as set_data, K as update_slot_base, L as get_all_dirty_from_scope, M as get_slot_changes, f as transition_in, t as transition_out, x as create_component, y as claim_component, F as src_url_equal, z as mount_component, N as destroy_each, A as destroy_component, o as onMount, D as noop, e as empty, H as listen } from "../../chunks/index-f8a70087.js";
 import { v as view } from "../../chunks/stores-02afa7af.js";
 function create_fragment$1(ctx) {
   let section;
@@ -784,7 +784,6 @@ function create_default_slot_1(ctx) {
       iframe0 = claim_element(nodes, "IFRAME", {
         src: true,
         class: true,
-        style: true,
         loading: true,
         referrerpolicy: true,
         title: true
@@ -794,7 +793,6 @@ function create_default_slot_1(ctx) {
       iframe1 = claim_element(nodes, "IFRAME", {
         src: true,
         class: true,
-        style: true,
         loading: true,
         referrerpolicy: true,
         title: true
@@ -805,15 +803,13 @@ function create_default_slot_1(ctx) {
     h() {
       if (!src_url_equal(iframe0.src, iframe0_src_value = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1482.8276627044584!2d12.093015358279207!3d41.9862094885059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f55f7f522e8f1%3A0xad7e3e210563e7b5!2sASD%20World%20Zen!5e0!3m2!1sen!2sit!4v1676199409781!5m2!1sen!2sit"))
         attr(iframe0, "src", iframe0_src_value);
-      attr(iframe0, "class", "w-full md:w-[48%] h-[50vh] svelte-8fii8a");
-      set_style(iframe0, "border", "0");
+      attr(iframe0, "class", "w-full md:w-[48%] h-[50vh] border-0 svelte-8fii8a");
       attr(iframe0, "loading", "lazy");
       attr(iframe0, "referrerpolicy", "no-referrer-when-downgrade");
       attr(iframe0, "title", "World Zen Cerveteri");
       if (!src_url_equal(iframe1.src, iframe1_src_value = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.6080530014383!2d12.074612215801183!3d41.96575306790258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f557ac78afc8b%3A0x3fb0019c18fedb81!2sASD%20Bad%20Boys!5e0!3m2!1sen!2sit!4v1676199434829!5m2!1sen!2sit"))
         attr(iframe1, "src", iframe1_src_value);
-      attr(iframe1, "class", "w-full md:w-[48%] h-[50vh] svelte-8fii8a");
-      set_style(iframe1, "border", "0");
+      attr(iframe1, "class", "w-full md:w-[48%] h-[50vh] border-0 svelte-8fii8a");
       attr(iframe1, "loading", "lazy");
       attr(iframe1, "referrerpolicy", "no-referrer-when-downgrade");
       attr(iframe1, "title", "World Zen Ladispoli");
@@ -988,7 +984,7 @@ function create_fragment(ctx) {
     l(nodes) {
       main = claim_element(nodes, "MAIN", { class: true });
       var main_nodes = children(main);
-      video = claim_element(main_nodes, "VIDEO", { id: true, class: true });
+      video = claim_element(main_nodes, "VIDEO", { preload: true, id: true, class: true });
       var video_nodes = children(video);
       source0 = claim_element(video_nodes, "SOURCE", { src: true, type: true });
       source1 = claim_element(video_nodes, "SOURCE", { src: true, type: true });
@@ -1051,6 +1047,7 @@ function create_fragment(ctx) {
       video.autoplay = true;
       video.muted = true;
       video.loop = true;
+      attr(video, "preload", "none");
       attr(video, "id", "background");
       attr(video, "class", "w-full h-full svelte-8fii8a");
       video.playsInline = true;
@@ -1204,8 +1201,6 @@ function instance($$self) {
     }
   ];
   onMount(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
   });
   const click_handler = (image) => {
     view(image);

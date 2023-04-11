@@ -35,9 +35,9 @@
 
     onMount(() => {
         // @ts-ignore
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        // (window.adsbygoogle = window.adsbygoogle || []).push({});
         // @ts-ignore
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        // (window.adsbygoogle = window.adsbygoogle || []).push({});
     });
 </script>
 
@@ -46,6 +46,7 @@
         autoplay
         muted
         loop
+        preload="none"
         id="background"
         class="w-full h-full"
         playsinline
@@ -183,16 +184,14 @@
 >
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1482.8276627044584!2d12.093015358279207!3d41.9862094885059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f55f7f522e8f1%3A0xad7e3e210563e7b5!2sASD%20World%20Zen!5e0!3m2!1sen!2sit!4v1676199409781!5m2!1sen!2sit"
-        class="w-full md:w-[48%] h-[50vh]"
-        style="border:0;"
+        class="w-full md:w-[48%] h-[50vh] border-0"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         title="World Zen Cerveteri"
     />
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.6080530014383!2d12.074612215801183!3d41.96575306790258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f557ac78afc8b%3A0x3fb0019c18fedb81!2sASD%20Bad%20Boys!5e0!3m2!1sen!2sit!4v1676199434829!5m2!1sen!2sit"
-        class="w-full md:w-[48%] h-[50vh]"
-        style="border:0;"
+        class="w-full md:w-[48%] h-[50vh] border-0"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         title="World Zen Ladispoli"
