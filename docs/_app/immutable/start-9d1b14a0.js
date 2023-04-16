@@ -902,7 +902,7 @@ const matchers = {};
 const nodes = [
   () => __vitePreload(() => import("./chunks/0-5a0fdd12.js"), true ? ["./chunks\\0-5a0fdd12.js","./chunks\\_layout-324900b4.js","./components\\pages\\_layout.svelte-1327f5cf.js","./chunks\\index-f8a70087.js","./chunks\\stores-02afa7af.js","./assets\\_layout-600a796f.css"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/1-9c20e587.js"), true ? ["./chunks\\1-9c20e587.js","./components\\error.svelte-428955ee.js","./chunks\\index-f8a70087.js","./chunks\\singletons-f83d5b81.js"] : void 0, import.meta.url),
-  () => __vitePreload(() => import("./chunks/2-57697c16.js"), true ? ["./chunks\\2-57697c16.js","./components\\pages\\_page.svelte-9f4d31ea.js","./chunks\\index-f8a70087.js","./chunks\\stores-02afa7af.js","./assets\\_page-02e7fb00.css"] : void 0, import.meta.url)
+  () => __vitePreload(() => import("./chunks/2-2889045c.js"), true ? ["./chunks\\2-2889045c.js","./components\\pages\\_page.svelte-a672d419.js","./chunks\\index-f8a70087.js","./chunks\\stores-02afa7af.js","./assets\\_page-02e7fb00.css"] : void 0, import.meta.url)
 ];
 const server_loads = [];
 const dictionary = {

@@ -205,36 +205,56 @@ class Section extends SvelteComponent {
 }
 const Social_svelte_svelte_type_style_lang = "";
 function create_fragment$1(ctx) {
+  let a0;
   let img0;
   let img0_src_value;
   let t0;
+  let a1;
   let img1;
   let img1_src_value;
   let t1;
+  let a2;
   let img2;
   let img2_src_value;
   let t2;
+  let a3;
   let img3;
   let img3_src_value;
   return {
     c() {
+      a0 = element("a");
       img0 = element("img");
       t0 = space();
+      a1 = element("a");
       img1 = element("img");
       t1 = space();
+      a2 = element("a");
       img2 = element("img");
       t2 = space();
+      a3 = element("a");
       img3 = element("img");
       this.h();
     },
     l(nodes) {
-      img0 = claim_element(nodes, "IMG", { alt: true, class: true, src: true });
+      a0 = claim_element(nodes, "A", { href: true });
+      var a0_nodes = children(a0);
+      img0 = claim_element(a0_nodes, "IMG", { alt: true, class: true, src: true });
+      a0_nodes.forEach(detach);
       t0 = claim_space(nodes);
-      img1 = claim_element(nodes, "IMG", { alt: true, class: true, src: true });
+      a1 = claim_element(nodes, "A", { href: true });
+      var a1_nodes = children(a1);
+      img1 = claim_element(a1_nodes, "IMG", { alt: true, class: true, src: true });
+      a1_nodes.forEach(detach);
       t1 = claim_space(nodes);
-      img2 = claim_element(nodes, "IMG", { alt: true, class: true, src: true });
+      a2 = claim_element(nodes, "A", { href: true });
+      var a2_nodes = children(a2);
+      img2 = claim_element(a2_nodes, "IMG", { alt: true, class: true, src: true });
+      a2_nodes.forEach(detach);
       t2 = claim_space(nodes);
-      img3 = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
+      a3 = claim_element(nodes, "A", { href: true });
+      var a3_nodes = children(a3);
+      img3 = claim_element(a3_nodes, "IMG", { src: true, alt: true, class: true });
+      a3_nodes.forEach(detach);
       this.h();
     },
     h() {
@@ -242,46 +262,54 @@ function create_fragment$1(ctx) {
       attr(img0, "class", "svg svelte-1abu3zw");
       if (!src_url_equal(img0.src, img0_src_value = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA2NCA2NCI+CjxwYXRoIGZpbGw9IiMwNjAwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMxLDkuNWMxMi4xMzEsMCwyMiw5Ljg2OSwyMiwyMgljMCwxMS4xMTMtOC4yODQsMjAuMzIyLTE5LDIxLjc5VjM4aDRsMi01LjAyOUwzNCwzM3YtNC43M2MwLTEuMjU0LDEuMDE2LTIuMjcsMi4yNy0yLjI3YzAuOTAyLDAsMS43MywwLDEuNzMsMHYtNGgtNC4yNTUJYy0xLjUyNCwwLTIuOTg1LDAuNjA1LTQuMDYyLDEuNjgzQzI4LjYwNSwyNC43NiwyOCwyNi4yMjEsMjgsMjcuNzQ1YzAsMi42NTMsMCw1LjIyNiwwLDUuMjI2aC00VjM4aDR2MTUuMjkJQzE3LjI4NCw1MS44MjIsOSw0Mi42MTMsOSwzMS41QzksMTkuMzY5LDE4Ljg2OSw5LjUsMzEsOS41eiIgY2xpcC1ydWxlPSJldmVub2RkIj48L3BhdGg+Cjwvc3ZnPg=="))
         attr(img0, "src", img0_src_value);
+      attr(a0, "href", "https://www.facebook.com/taekwondoworldzen");
       attr(img1, "alt", "instagram asdworldzen asd culturale taekwondo muay-thai social page martial arts");
       attr(img1, "class", "svg svelte-1abu3zw");
       if (!src_url_equal(img1.src, img1_src_value = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA2NCA2NCI+CjxwYXRoIGQ9Ik0gMzEuODIwMzEyIDEyIEMgMTMuNDM4MzEyIDEyIDEyIDEzLjQzOTMxMiAxMiAzMS44MjAzMTIgTCAxMiAzMi4xNzk2ODggQyAxMiA1MC41NjA2ODggMTMuNDM4MzEzIDUyIDMxLjgyMDMxMiA1MiBMIDMyLjE3OTY4OCA1MiBDIDUwLjU2MTY4OCA1MiA1MiA1MC41NjA2ODggNTIgMzIuMTc5Njg4IEwgNTIgMzIgQyA1MiAxMy40NTIgNTAuNTQ4IDEyIDMyIDEyIEwgMzEuODIwMzEyIDEyIHogTSA0My45OTQxNDEgMTggQyA0NS4wOTkxNDEgMTcuOTk3IDQ1Ljk5NyAxOC44ODkxNDEgNDYgMTkuOTk0MTQxIEMgNDYuMDAzIDIxLjA5OTE0MSA0NS4xMTA4NTkgMjEuOTk3IDQ0LjAwNTg1OSAyMiBDIDQyLjkwMDg1OSAyMi4wMDMgNDIuMDAzIDIxLjExMDg1OSA0MiAyMC4wMDU4NTkgQyA0MS45OTcgMTguOTAwODU5IDQyLjg4OTE0MSAxOC4wMDMgNDMuOTk0MTQxIDE4IHogTSAzMS45NzY1NjIgMjIgQyAzNy40OTg1NjIgMjEuOTg3IDQxLjk4NyAyNi40NTQ1NjMgNDIgMzEuOTc2NTYyIEMgNDIuMDEzIDM3LjQ5ODU2MiAzNy41NDU0MzcgNDEuOTg3IDMyLjAyMzQzOCA0MiBDIDI2LjUwMTQzNyA0Mi4wMTMgMjIuMDEzIDM3LjU0NTQzNyAyMiAzMi4wMjM0MzggQyAyMS45ODcgMjYuNTAxNDM3IDI2LjQ1NDU2MyAyMi4wMTMgMzEuOTc2NTYyIDIyIHogTSAzMS45ODYzMjggMjYgQyAyOC42NzIzMjggMjYuMDA4IDI1Ljk5MiAyOC43MDE2MjUgMjYgMzIuMDE1NjI1IEMgMjYuMDA4IDM1LjMyODYyNSAyOC43MDA2NzIgMzguMDA4IDMyLjAxMzY3MiAzOCBDIDM1LjMyNzY3MiAzNy45OTIgMzguMDA4IDM1LjI5OTMyOCAzOCAzMS45ODYzMjggQyAzNy45OTIgMjguNjcyMzI4IDM1LjI5OTMyOCAyNS45OTIgMzEuOTg2MzI4IDI2IHoiPjwvcGF0aD4KPC9zdmc+"))
         attr(img1, "src", img1_src_value);
+      attr(a1, "href", "https://www.instagram.com/asdworldzen/");
       attr(img2, "alt", "youtube asdworldzen asd culturale taekwondo muay-thai social page martial arts");
       attr(img2, "class", "svg svelte-1abu3zw");
       if (!src_url_equal(img2.src, img2_src_value = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA2NCA2NCI+CjxwYXRoIGQ9Ik01My41MjcsMTcuNDI3QzU1LjcxNCwxOS42NzcsNTYsMjMuMjUyLDU2LDMycy0wLjI4NiwxMi4zMjMtMi40NzMsMTQuNTczQzUxLjM0LDQ4LjgyMiw0OS4wNjIsNDksMzIsNDkJcy0xOS4zNC0wLjE3OC0yMS41MjctMi40MjdDOC4yODYsNDQuMzIzLDgsNDAuNzQ4LDgsMzJzMC4yODYtMTIuMzIzLDIuNDczLTE0LjU3M1MxNC45MzgsMTUsMzIsMTVTNTEuMzQsMTUuMTc4LDUzLjUyNywxNy40Mjd6IE0yNy45NSwzOS40MTdsMTIuMTQ2LTcuMDM4TDI3Ljk1LDI1LjQ1MVYzOS40MTd6Ij48L3BhdGg+Cjwvc3ZnPg=="))
         attr(img2, "src", img2_src_value);
+      attr(a2, "href", "https://youtube.com/@ASDWorldZen");
       if (!src_url_equal(img3.src, img3_src_value = "favicon.png"))
         attr(img3, "src", img3_src_value);
       attr(img3, "alt", "World Zen Taekwondo ASD Icon");
       attr(img3, "class", "svelte-1abu3zw");
+      attr(a3, "href", "https://app.worldzen.it/");
     },
     m(target, anchor) {
-      insert_hydration(target, img0, anchor);
+      insert_hydration(target, a0, anchor);
+      append_hydration(a0, img0);
       insert_hydration(target, t0, anchor);
-      insert_hydration(target, img1, anchor);
+      insert_hydration(target, a1, anchor);
+      append_hydration(a1, img1);
       insert_hydration(target, t1, anchor);
-      insert_hydration(target, img2, anchor);
+      insert_hydration(target, a2, anchor);
+      append_hydration(a2, img2);
       insert_hydration(target, t2, anchor);
-      insert_hydration(target, img3, anchor);
+      insert_hydration(target, a3, anchor);
+      append_hydration(a3, img3);
     },
     p: noop,
     i: noop,
     o: noop,
     d(detaching) {
       if (detaching)
-        detach(img0);
+        detach(a0);
       if (detaching)
         detach(t0);
       if (detaching)
-        detach(img1);
+        detach(a1);
       if (detaching)
         detach(t1);
       if (detaching)
-        detach(img2);
+        detach(a2);
       if (detaching)
         detach(t2);
       if (detaching)
-        detach(img3);
+        detach(a3);
     }
   };
 }
@@ -987,7 +1015,12 @@ function create_fragment(ctx) {
     l(nodes) {
       main = claim_element(nodes, "MAIN", { class: true });
       var main_nodes = children(main);
-      video = claim_element(main_nodes, "VIDEO", { preload: true, id: true, class: true });
+      video = claim_element(main_nodes, "VIDEO", {
+        preload: true,
+        id: true,
+        class: true,
+        poster: true
+      });
       var video_nodes = children(video);
       source0 = claim_element(video_nodes, "SOURCE", { src: true, type: true });
       source1 = claim_element(video_nodes, "SOURCE", { src: true, type: true });
@@ -1051,6 +1084,7 @@ function create_fragment(ctx) {
       attr(video, "preload", "none");
       attr(video, "id", "background");
       attr(video, "class", "w-full h-full svelte-8fii8a");
+      attr(video, "poster", "worldzen-youtube-canale-combattimento-sport-taekwondo-video-copertina-cerveteri-ladispoli-muay-thai-asd-culturale-associazione-sportiva-club-sportivo.jpg");
       video.playsInline = true;
       if (!src_url_equal(img.src, img_src_value = "world-zen-asd-culturale-sport-taekwondo-muay-thai-titolo-logo-nome.svg"))
         attr(img, "src", img_src_value);

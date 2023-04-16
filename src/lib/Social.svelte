@@ -22,7 +22,7 @@
     />
 </a>
 
-<a href="jkla">
+<a href="https://app.worldzen.it/">
     <img src="favicon.png" alt="World Zen Taekwondo ASD Icon" />
 </a>
 
