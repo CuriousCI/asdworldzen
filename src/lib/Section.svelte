@@ -7,14 +7,16 @@
 
 <section class="w-full min-h-min p-10 {background}">
     <a {href}>
-        <h1 class="text-2xl sm:text-4xl md:text-5xl mb-10 font-bold">
+        <h2
+            class="text-2xl sm:text-4xl md:text-5xl mb-10 font-bold flex items-center gap-2"
+        >
             {title}
-            <span
-                class="material-symbols-outlined text-2xl sm:text-4xl md:text-5xl relative top-2"
+            <i
+                class="material-symbols-outlined text-2xl sm:text-4xl md:text-5xl"
             >
                 {icon}
-            </span>
-        </h1>
+            </i>
+        </h2>
     </a>
     <div
         class="w-full flex flex-wrap justify-center md:justify-start items-center gap-4"

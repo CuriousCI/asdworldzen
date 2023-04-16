@@ -19,7 +19,6 @@ body {
     color: white;
 }
 
-
 h1 {
     @apply font-bold text-xl sm:text-2xl md:text-4xl;
 }

@@ -1,36 +1,15 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import Section from "../lib/Section.svelte";
     import { view } from "$lib/stores";
 
-    const gallery = [
-        "muay-thai-lethwei.webp",
-        "worldzen.webp",
-        "insta.webp",
-        "m13k.webp",
-    ];
+    import Section from "$lib/Section.svelte";
+    import Social from "$lib/Social.svelte";
 
-    const social = [
-        {
-            alt: "YouTube",
-            href: "https://youtube.com/@ASDWorldZen",
-            src: "youtube.webp",
-        },
-        {
-            alt: "Instagram",
-            href: "https://www.instagram.com/asdworldzen/",
-            src: "instagram.webp",
-        },
-        {
-            alt: "Facebook",
-            href: "https://www.facebook.com/taekwondoworldzen",
-            src: "facebook.webp",
-        },
-        {
-            alt: "App",
-            href: "https://app.worldzen.it",
-            src: "favicon.png",
-        },
+    const gallery = [
+        "muay-thai-lethwei-palestra-piazza-grande-ladispoli-stage-aperto-kru-instagram-world-zen-italian-lethwei-academy.jpg",
+        "taekwondo-corsi-cerveteri-ladispoli-world-zen-muay-thai-asd-badboys-mattei-kickboxing-k1-sanda-combattimento-difesa-personale.jpg",
+        "taekwondo-asd-badboys-ladispoli-world-zen-itf.jpg",
+        "muay-thai-m13k-cerveteri-mattei-world-zen.jpg",
     ];
 
     onMount(() => {
@@ -51,8 +30,14 @@
         class="w-full h-full"
         playsinline
     >
-        <source src="/background.mp4" type="video/mp4" />
-        <source src="/background.webm" type="video/webm" />
+        <source
+            src="/asd-world-zen-youtube-canale-sport-taekwondo-muay-thai-combattimento-potenza-velocita-agilita.mp4"
+            type="video/mp4"
+        />
+        <source
+            src="/asd-world-zen-youtube-canale-sport-taekwondo-muay-thai-combattimento-potenza-velocita-agilita.webm"
+            type="video/webm"
+        />
         <track
             src="captions_en.vtt"
             kind="captions"
@@ -66,24 +51,20 @@
     >
         <div class="p-10">
             <a href="https://app.worldzen.it">
-                <img src="worldzen.svg" alt="World Zen" />
+                <img
+                    src="world-zen-asd-culturale-sport-taekwondo-muay-thai-titolo-logo-nome.svg"
+                    alt="World Zen"
+                />
             </a>
-            <div class="w-full flex justify-between">
+            <div
+                class="w-full flex justify-center gap-4 items-center flex-wrap"
+            >
                 <div class="flex items-center gap-2 sm:gap-5">
-                    {#each social as { alt, href, src }}
-                        <a {href} target="_blank" rel="noreferrer">
-                            <img
-                                {src}
-                                {alt}
-                                class="h-8 sm:h-14 md:h-20 drop-shadow-2xl"
-                                height="1"
-                            />
-                        </a>
-                    {/each}
+                    <Social />
                 </div>
                 <a
                     href="tel:+393932214993"
-                    class="text-2xl sm:text-3xl md:text-6xl font-extrabold"
+                    class="text-5xl sm:text-6xl md:text-6xl font-extrabold"
                 >
                     3932214993
                 </a>
@@ -105,27 +86,12 @@
         >
             <img
                 src={image}
-                alt="World Zen"
+                alt="World Zen {image} Taekwon-Do Muay-Thai"
                 class="max-h-screen md:max-h-[30vh]"
+                loading="lazy"
             />
         </button>
     {/each}
-    <!-- <img -->
-    <!--     src="muay-thai-lethwei.webp" -->
-    <!--     alt="World Zen" -->
-    <!--     class="max-h-screen md:max-h-[40vh]" -->
-    <!-- /> -->
-    <!-- <img -->
-    <!--     src="worldzen.webp" -->
-    <!--     alt="World Zen" -->
-    <!--     class="max-h-screen md:max-h-[40vh]" -->
-    <!-- /> -->
-    <!-- <img src="m13k.webp" alt="M13K" class="max-h-screen md:max-h-[40vh]" /> -->
-    <!-- <img -->
-    <!--     src="insta.webp" -->
-    <!--     alt="Instagram" -->
-    <!--     class="max-h-screen md:max-h-[40vh]" -->
-    <!-- /> -->
 </Section>
 
 <Section
@@ -135,34 +101,43 @@
 >
     <div class="flex flex-col gap-4">
         <div>
-            <h1>Taekwon-Do</h1>
+            <h2 class="text-amber-300">Taekwon-Do</h2>
             <div class="flex gap-2">
-                <p class="font-bold">Sabum <i> Marcelo Valente </i>:</p>
+                <p><b>Sabum <i> V. Marcelo </i></b>:</p>
                 <a href="tel:3932214993"><p>3932214993</p></a>
             </div>
-            <p>
-                Presso <b>ISIS Enrico Mattei</b>, via Paolo Borsellino 3,
-                Cerveteri
+            <p class="text-gray-300">
+                Presso ISIS Enrico Mattei, via Paolo Borsellino 3, Cerveteri
             </p>
-            <p class="font-bold italic">Lunedì e mercoledì 19:30-22:00</p>
+            <p class="font-bold italic underline text-amber-200">
+                Lunedì e mercoledì 19:30-22:00
+            </p>
         </div>
         <div>
             <span class="flex gap-2">
                 <p class="font-bold">Bosabum <i> C. Bryan </i>:</p>
                 <a href="tel:3487474257"><p>3487474257</p></a>
             </span>
-            <p>Presso <b>ASD Bad Boys</b>, via Aldo Moro 39, Ladispoli</p>
-            <p class="font-bold italic">Martedì e giovedì 17:30-19:00</p>
+            <p class="text-gray-300">
+                Presso ASD Bad Boys, via Aldo Moro 39, Ladispoli
+            </p>
+            <p class="font-bold italic underline text-amber-200">
+                Martedì e giovedì 17:30-19:00
+            </p>
         </div>
         <div>
-            <h1>Muay-Thai</h1>
-            <h2>M.13.K. Ṣ̄ilpa k̄hæn s̄ib s̄ām</h2>
+            <h2 class="text-amber-300">Muay-Thai</h2>
+            <h3>M.13.K. Ṣ̄ilpa k̄hæn s̄ib s̄ām</h3>
             <span class="flex gap-2">
-                <p class="font-bold">Kru <i> C. Bryan </i>:</p>
+                <p><b>Kru <i> C. Bryan </i>:</b></p>
                 <a href="tel:3487474257"><p>3487474257</p></a>
             </span>
-            <p>Presso ISIS Enrico Mattei, via Paolo Borsellino 3, Cerveteri</p>
-            <p class="font-bold italic">Lunedì e mercoledì 18:30-19:30</p>
+            <p class="text-gray-300">
+                Presso ISIS Enrico Mattei, via Paolo Borsellino 3, Cerveteri
+            </p>
+            <p class="font-bold italic underline text-amber-200">
+                Lunedì e mercoledì 18:30-19:30
+            </p>
         </div>
     </div>
 </Section>
@@ -215,8 +190,8 @@
 <!--     data-ad-slot="5257041353" -->
 <!--     data-ad-format="auto" -->
 <!--     data-full-width-responsive="true" -->
-
 <!-- /> -->
+
 <style>
     #background {
         object-fit: cover;

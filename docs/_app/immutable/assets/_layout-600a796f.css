@@ -415,9 +415,6 @@ video {
 .top-0{
   top: 0px;
 }
-.top-2{
-  top: 0.5rem;
-}
 .z-10{
   z-index: 10;
 }
@@ -432,9 +429,6 @@ video {
 }
 .contents{
   display: contents;
-}
-.h-8{
-  height: 2rem;
 }
 .h-\[50vh\]{
   height: 50vh;
@@ -458,6 +452,9 @@ video {
   min-height: -moz-min-content;
   min-height: min-content;
 }
+.w-16{
+  width: 4rem;
+}
 .w-full{
   width: 100%;
 }
@@ -475,9 +472,6 @@ video {
 }
 .justify-center{
   justify-content: center;
-}
-.justify-between{
-  justify-content: space-between;
 }
 .gap-2{
   gap: 0.5rem;
@@ -534,6 +528,10 @@ video {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
 .font-bold{
   font-weight: 700;
 }
@@ -543,12 +541,31 @@ video {
 .italic{
   font-style: italic;
 }
+.\!text-white{
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+.text-amber-200{
+  --tw-text-opacity: 1;
+  color: rgb(253 230 138 / var(--tw-text-opacity));
+}
+.text-amber-300{
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity));
+}
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+.underline{
+  text-decoration-line: underline;
+}
 .drop-shadow{
   --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.drop-shadow-2xl{
-  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+.invert{
+  --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter{
@@ -612,30 +629,21 @@ h2{
   }
 }
 @media (min-width: 640px){
-  .sm\:h-14{
-    height: 3.5rem;
-  }
   .sm\:gap-5{
     gap: 1.25rem;
-  }
-  .sm\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
   .sm\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+  .sm\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 @media (min-width: 768px){
-  .md\:h-20{
-    height: 5rem;
-  }
   .md\:max-h-\[30vh\]{
     max-height: 30vh;
-  }
-  .md\:max-h-\[40vh\]{
-    max-height: 40vh;
   }
   .md\:w-\[48\%\]{
     width: 48%;
