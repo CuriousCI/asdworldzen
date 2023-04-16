@@ -28,6 +28,7 @@
         preload="none"
         id="background"
         class="w-full h-full"
+        poster="worldzen-youtube-canale-combattimento-sport-taekwondo-video-copertina-cerveteri-ladispoli-muay-thai-asd-culturale-associazione-sportiva-club-sportivo.jpg"
         playsinline
     >
         <source
