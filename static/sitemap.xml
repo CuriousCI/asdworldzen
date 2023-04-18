@@ -16,4 +16,8 @@
   <loc>http://worldzen.it/</loc>
   <lastmod>2023-04-11</lastmod>
 </url>
+  <loc>http://app.worldzen.it</loc>
+  <lastmod>2023-04-18</lastmod>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
 </urlset>
