@@ -30,10 +30,10 @@
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
         <NavLi href="/" active={true}>Home</NavLi>
-        <NavLi href="#corsi">Corsi</NavLi>
-        <NavLi href="#eventi">Eventi</NavLi>
-        <NavLi href="#app">App</NavLi>
-        <NavLi href="#contatti">Contatti</NavLi>
+        <NavLi href="/">Corsi</NavLi>
+        <NavLi href="/">Eventi</NavLi>
+        <NavLi href="/">App</NavLi>
+        <NavLi href="/">Contatti</NavLi>
     </NavUl>
 </Navbar>
 
