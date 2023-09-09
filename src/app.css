@@ -18,6 +18,17 @@ body {
     color: white;
 }
 
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
+#bg {
+    background-image: url('bg.jpeg') !important;
+    background-size: cover;
+}
+
 h1 {
     @apply font-bold text-xl sm:text-2xl md:text-4xl;
 }
