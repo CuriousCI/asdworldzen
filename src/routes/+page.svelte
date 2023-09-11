@@ -120,14 +120,14 @@
     const events = [
         {
             title: "Gara",
-            date: "15 ottobre 2022",
+            date: "15 ottobre 2023",
             description:
                 "Gli atleti della World Zen parteciperanno alla gara organizzata da 'Extreme Top Fighters'",
         },
         {
             title: "Inizio Corsi",
             date: "1 settembre 2023",
-            description: "I nostri corsi inizieranno il 1 settembre 2022",
+            description: "I nostri corsi inizieranno il 1 settembre 2023",
         },
         {
             title: "Prova Muay-Thai",
